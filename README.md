@@ -60,7 +60,9 @@ Technologies to Be Used
   - Edge Visual Assaying: YOLOv8-Nano running on edge devices to detect rot, bruising, and size distribution from a 5-second video clip.
   - IoT Cold-Pod Telemetry: ESP32 microcontrollers with DHT22 temperature/ethylene sensors communicating via MQTT to monitor solar phase-change cooling pods.
 - Database & Spatial Indexing: PostgreSQL with Uber H3 Hexagonal Spatial Index for real-time backhaul truck matching; Redis for live auction state management.
-  Technical Architecture & Workflow Diagram
+  ##Technical Architecture & Workflow Diagram
+  ```
+  mermaid
   graph TD
   A[Smallholder Farmer: WhatsApp Voice / Missed-Call IVR] -->|Registers Upcoming Harvest| B(Satellite NDVI & YOLOv8-Nano Quality Assay)
   C[Institutional Buyers, Processors & RWAs] -->|Places Forward Bids & Funds UPI Escrow| D{PayirSetu Reverse-Auction & Glut Engine}
@@ -73,8 +75,9 @@ Technologies to Be Used
   C -->|Digital Assay & Delivery Handshake| H[RazorpayX Automated Split UPI Settlement]
   H -->|Direct Bank Payout| A
   H -->|Backhaul Freight & Cold-Storage Fee| F
+  ```
 
-Methodology and Process for Implementation
+###Methodology and Process for Implementation
 
 - Pre-Harvest Listing & Satellite Verification: Farmers send a voice note or photo via WhatsApp 10 days before harvest; the backend cross-checks farm location with Sentinel-2 crop maturity data and generates a verified digital lot.
 - Reverse-Auction Forward Matching: Institutional buyers bid on pooled village lots above an AI-calculated floor price (indexed to live e-NAM/Agmarknet rates), locking funds into a digital UPI escrow account.
