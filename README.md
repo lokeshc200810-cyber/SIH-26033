@@ -76,7 +76,7 @@ Technologies to Be Used
   H -->|Backhaul Freight & Cold-Storage Fee| F
   ```
 
-##Methodology and Process for Implementation
+## Methodology and Process for Implementation
 
 - Pre-Harvest Listing & Satellite Verification: Farmers send a voice note or photo via WhatsApp 10 days before harvest; the backend cross-checks farm location with Sentinel-2 crop maturity data and generates a verified digital lot.
 - Reverse-Auction Forward Matching: Institutional buyers bid on pooled village lots above an AI-calculated floor price (indexed to live e-NAM/Agmarknet rates), locking funds into a digital UPI escrow account.
